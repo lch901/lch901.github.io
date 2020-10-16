@@ -30,7 +30,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
   
   <link rel="stylesheet" href="css/index.css">
   <style>
@@ -38,31 +38,90 @@
   		margin:0;
   		padding:0;
   	}
-  	.contain{}
+  	#home,#introduct,#skill,#project,#end{
+  		padding:50px;
+  	}
   	.contain > .navbar{
-  		background-color:#ddd;
   		position: fixed;
   		right:0;
+  		background-color:#ccc;
+  		z-index:1;
+  		opacity: 0.7;
   	}
   	.contain > #home{
-  		height:800px;
-  		background-color:#777;
+  		height:1000px;
+  		background:url("images/main.jpg");
+  		filter:brightness(50%);
+  		border-bottom:1px solid #ddd;
+  		overflow: hidden;
+  	}
+  	.contain > #home > h1{
+  		text-align:center;
+  		line-height:800px;
+  		filter:none;
+  		user-select:none;
+  		font-size:80px;
+  		color:#fff;
   	}
   	.contain > #introduct{
-  	height:800px;
-  		background-color:#888;
+  		height:1000px;
+  		background:url("images/introduct.jpg");
+  		background-position: center; 
+	  	background-repeat: no-repeat; 
+	  	background-size: cover; 
+  		border-bottom:1px solid #ddd;
+  	}
+  	.contain > #introduct > .introduct-1{
+  		margin:0 auto;
+  		width:1000px;
+  	}
+  	.contain > #introduct > .introduct-1> .introduct-1-1{
+  		font-size:48px;
+  		margin:50px;
+  	}
+  	
+  	.contain > #introduct >.introduct-1> .introduct-1-2{
+  		width:800px;
+  		margin:50px;
+  		font-size:24px;
   	}
   	.contain > #skill{
-  	height:800px;
-  		background-color:#999;
+  		height:800px;
+  		background:url("images/skill.jpg");
+  	  	border-bottom:1px solid #ddd;
+  	}
+  	.contain > #skill h1{
+  		margin-bottom:50px;
+  		color:#fff;
+  		font-size:48px;
+  		text-align:center;
+  	}
+  	.contain > #skill > .skill-1{
+  		width:1000px;
+  		margin:0 auto;
+  	}
+  	.contain > #skill img{
+  		border-radius:40px;
+  		padding:20px;
   	}
   	.contain > #project{
-  	height:800px;
-  		background-color:#aaa;
+  		height:1000px;
+  		background-color:#98cbf1;
+  		border-bottom:1px solid #ddd;
+  	}
+  	.contain > #project > h1{
+  		text-align:center;
+  	}
+  	.contain > #project > .project-1{
+  		display:flex;
+  	}
+  	.contain > #project > .project-1 img,.contain > #project > .project-1 p{
+  		margin:20px;
   	}
   	.contain > #end{
-  		height:800px;
-  		background-color:#bbb;
+  		text-align:center;
+  		height:200px;
+  		border-bottom:1px solid #ddd;
   	}
   </style>
 </head>
@@ -97,33 +156,47 @@
 		    </div>
 		 </nav>
 		<div id="home">
-			developer 이창현
+			<h1>신입 웹개발자 이창현입니다.</h1>
 		</div>
 		<div id="introduct">
-			자기소개서
+			<div class="introduct-1">
+				<p class="introduct-1-1">자기소개서<p/>
+				<p class="introduct-1-2">
+					나는 새로운 것에 도전하는 것을 좋아합니다. 대학생 때 처음으로 코딩을 배우고 컴퓨터에 관한 
+					여러가지 지식을 쌓고 보다 전문 지식이 깊어지는 때문에 한국 IT교육원에 입학했습니다. 
+					그래서 Java Web개발을 배우고 홈페이지도 직접 만들어 보았습니다. 
+					미숙해도 코드를 만들어 보고 UI디자인도 하면서 DB설계도 했어요.
+					Web개발이라는 것은 일은 힘들지 모르지만, 컴퓨터만 있으면 돈이 없어도 
+					창의력과 기술력을 가지고 작품을 만들 수 있기 때문에 정말 매력 있는 일이라고 생각합니다.
+				</p>
+			</div>
 		</div>
 		<div id="skill">
-			html
-			css
-			javascript
-			bootstrap
-			java
-			jsp
-			spring
-			oracle
-			
+			<div class="skill-1">
+				<h1>Skill</h1>
+				<img src="images/html.jpg" alt="이미지 없음">
+				<img src="images/css.jpg" alt="이미지 없음">
+				<img src="images/javascript.jpg" alt="이미지 없음">
+				<img src="images/bootstrap.jpg" alt="이미지 없음">
+				<br/>
+				<img src="images/java.jpg" alt="이미지 없음">
+				<img src="images/jsp.jpg" alt="이미지 없음">
+				<img src="images/spring.jpg" alt="이미지 없음">
+				<img src="images/oracleDB.jpg" alt="이미지 없음">
+			</div>
 		</div>
 		<div id="project">
-			<a href="">게시판</a>
-			<a href="">쇼핑몰</a>
+			<!--  css 애니메이션 효과 추가 -->
+			<h1>Project</h1>
+			<div class="project-1">
+				<a href=""><img class="mar" src="" alt="게시판"></a>
+				<a href=""><img class="mar" src="" alt="쇼핑몰 메인화면"></a>
+			</div>
 		</div>
 		<div id="end">
-			end
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			end
+			<h1>end</h1>
+			<h3>leechanggod@gmail.com</h3>
+				
 		</div>
 	</div>
 </body>
